@@ -63,7 +63,7 @@ public class CustomerController {
 	@GetMapping("/delete")
 	public String deleteCustomer(NTTDataCustomer customer) {
 		customerService.eliminar(customer);
-		return "redirect:/home";
+		return "/home";
 	}
 	
 
