@@ -23,7 +23,7 @@ public class CustomerController {
 	private NTTDataCustomerManagementServiceI customerService;
 	
 	
-	@GetMapping("/home")
+	@GetMapping("/*")
 	public String mostrarHome() {
 		return "/home";
 	}
@@ -57,6 +57,14 @@ public class CustomerController {
 		customerService.insertNewCustomer(newCustomer);
 		
 		return "/home";
+	}
+	
+	//ELIMINAR CLIENTE
+	
+	@GetMapping("/delete")
+	public String deleteCustomer(NTTDataCustomer customer) {
+		customerService.eliminar(customer);
+		return "redirect:/home";
 	}
 	
 

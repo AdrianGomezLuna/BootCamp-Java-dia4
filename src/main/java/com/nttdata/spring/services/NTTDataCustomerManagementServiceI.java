@@ -46,5 +46,12 @@ public interface NTTDataCustomerManagementServiceI {
 	 * @param name
 	 */
 	public List<NTTDataCustomer> searchByName2(final String name);
+	
+	
+	/**
+	 * Método que elimina un cliente
+	 * @param customer
+	 */
+	public void eliminar(NTTDataCustomer customer);
 
 }

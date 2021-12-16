@@ -20,6 +20,7 @@
 	      <th>1º Apellido</th>
 	      <th>2º Apellido</th>
 	      <th>Nº Identificación</th>
+	      <th>Otros</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -29,6 +30,7 @@
 	    		<td scope="row" th:text="${NTTDataCustomer.surName1}"></td>
 	    		<td scope="row" th:text="${NTTDataCustomer.surName2}"></td>
 	    		<td scope="row" th:text="${NTTDataCustomer.identityDocNumber}"></td>
+	    		<td scope="row"><a th:href="@{/delete(id=${NTTDataCustomer.id})}" class="btn btn-outline-warning ">Eliminar</a></td>
 	    	</tr>
 	    </th>
 	  </tbody>

@@ -89,5 +89,13 @@ public class NTTDataCustomerManagementServiceImpl implements NTTDataCustomerMana
 			}
 		}
 	}
+	
+	/**
+	 * Elimina cliente
+	 */
+	@Override
+	public void eliminar(NTTDataCustomer customer) {
+		customerRepository.delete(customer);
+	}
 
 }
