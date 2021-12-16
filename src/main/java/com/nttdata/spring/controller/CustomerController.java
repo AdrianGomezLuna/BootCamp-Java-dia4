@@ -38,8 +38,7 @@ public class CustomerController {
 		NTTDataCustomer.addAttribute("customer", lista);
 		return "mostrarTodo";
 	}
-	
-	
+		
 	
 	//CREACIÓN NUEVO CLIENTE
 	
@@ -68,6 +67,23 @@ public class CustomerController {
 	}
 	
 
+	//BUSCAR
+	
+	@PostMapping("/buscar")
+	public String buscar(@ModelAttribute NTTDataCustomer newCustomer, Model model) {
+		List<NTTDataCustomer> lista = customerService.searchByName2(newCustomer.getName());
+		model.addAttribute("customer",lista);
+		return "mostrarBuscados";
+	}
+	
+	@GetMapping("/mostrarBuscados")
+	public String mostrarBuscados(Model NTTDataCustomer) {
+
+		List<NTTDataCustomer> lista = customerService.searchAllCustomers2();
+
+		NTTDataCustomer.addAttribute("customer", lista);
+		return "/mostrarBuscados";
+	}
 	
 
 }

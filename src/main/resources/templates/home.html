@@ -21,6 +21,16 @@
 	  		</li>		
 		</ul>	
 	</div>
+	<div class="card-body text-white bg-dark">
+		<form th:action="@{./buscar}" th:object="${newCustomer}" method="POST">
+			<div class="form-group mx-5">
+	  			<label for="inpCustomerName">Name: </label>
+	  			<input type="text" required="required" class="form-control col-4" id="inpCustomerName" name="name" placeholder="Nombre">
+			</div>
+			
+			<button type="submit" name="btnSearchCustomer" class="btn btn-success mx-5">Buscar</button>
+		</form>
+	</div>
 
 
 </body>
