@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SISTEMA EVERIS Customer</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="container">
+	
+	<div class="text-center mt-1 mb-1">		
+		<a class="btn btn-outline-primary" href="home">Volver</a>
+	</div>
+
+	<table class="table">
+	  <thead class="thead-dark">
+	    <tr>
+	      <th>Name</th>
+	      <th>1º Apellido</th>
+	      <th>2º Apellido</th>
+	      <th>Nº Identificación</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <th:block th:each="NTTDataCustomer : ${customer}">
+	    	<tr>
+	    		<td scope="row" th:text="${NTTDataCustomer.name}"></td>
+	    		<td scope="row" th:text="${NTTDataCustomer.surName1}"></td>
+	    		<td scope="row" th:text="${NTTDataCustomer.surName2}"></td>
+	    		<td scope="row" th:text="${NTTDataCustomer.identityDocNumber}"></td>
+	    	</tr>
+	    </th>
+	  </tbody>
+	</table>
+	
+</body>
+</html>
