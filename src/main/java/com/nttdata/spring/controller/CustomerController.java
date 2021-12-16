@@ -75,15 +75,6 @@ public class CustomerController {
 		model.addAttribute("customer",lista);
 		return "mostrarBuscados";
 	}
-	
-	@GetMapping("/mostrarBuscados")
-	public String mostrarBuscados(Model NTTDataCustomer) {
-
-		List<NTTDataCustomer> lista = customerService.searchAllCustomers2();
-
-		NTTDataCustomer.addAttribute("customer", lista);
-		return "/mostrarBuscados";
-	}
-	
+		
 
 }
